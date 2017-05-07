@@ -89,10 +89,10 @@ function buildAndShowHomeHTML (categories) {
 // Given array of category objects, returns a random category object.
 function chooseRandomCategory (categories) {
   // Choose a random index into the array (from 0 inclusively until array length (exclusively))
-  var randomArrayIndex = Math.floor(Math.random() * categories.length);
+  var randomArrayIndex = Math.ceil(Math.random()*categories.length);
 
   // return category object with that randomArrayIndex
-  return categories[randomArrayIndex + 1];
+  return categories[randomArrayIndex];
 }
 
 
@@ -253,7 +253,7 @@ function buildMenuItemsViewHtml(categoryMenuItems,
                      menuItems[i].description);
 
     // Add clearfix after every second menu item
-    if (i % 2 !== 0) {
+    if (i % 2 != 0) {
       html +=
         "<div class='clearfix visible-lg-block visible-md-block'></div>";
     }
