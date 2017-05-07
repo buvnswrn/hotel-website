@@ -43,7 +43,7 @@ var insertProperty = function (string, propName, propValue) {
   string = string
     .replace(new RegExp(propToReplace, "g"), propValue);
   return string;
-};
+}
 
 // Remove the class 'active' from home and switch to Menu button
 var switchMenuToActive = function () {
@@ -295,7 +295,7 @@ function buildMenuItemsViewHtml(categoryMenuItems,
                      menuItems[i].description);
 
     // Add clearfix after every second menu item
-    if (i % 2 !== 0) {
+    if (i % 2 != 0) {
       html += 
         "<div class='clearfix visible-lg-block visible-md-block'></div>";
     }
